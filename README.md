@@ -195,3 +195,80 @@ follow this steps
 ![image](https://github.com/user-attachments/assets/1bca246b-fa4a-436e-8062-3746f55d0e92)
 
 
+https://github.com/user-attachments/assets/03ce6c31-20da-44f4-97b9-31346889f6bc
+
+## Let's Toggle The Blue & Green Led Together
+
+before we started we have some necessary docs : 
+
+1. [S32K3X4EVB-T172_Hardware User Manuel ](https://github.com/user-attachments/files/19009350/S32K3X4EVB-T172_PackRevB2_HW_User.Manual.pdf)
+2. [S32K3X4EVB-T172_Schematic ](https://github.com/user-attachments/files/19009368/S32K3X4EVB-T172_PackRevB2_Schematic.pdf)
+
+## S32K344 PORTA PINOUT : 
+
+![image](https://github.com/user-attachments/assets/816e9c4d-913d-4cb6-ad34-efd10a11a3a2)
+
+## S32K344 PORTB PINOUT :
+
+![image](https://github.com/user-attachments/assets/6702fee6-8485-4512-b784-b65eb0712022)
+
+## S32K344 PORTC PINOUT :
+
+![image](https://github.com/user-attachments/assets/503ca0da-dccf-4ed3-8ca9-30e888897fee)
+
+
+## S32K344 PORTD PINOUT :
+
+![image](https://github.com/user-attachments/assets/db58ee34-4ea9-4337-b29e-0889b400a67d)
+
+
+## S32K344 PORTE PINOUT :
+
+![image](https://github.com/user-attachments/assets/340e0e8c-783d-4d59-867e-59adf2bb3aa4)
+
+## Default Configuration 
+
+![image](https://github.com/user-attachments/assets/f68fa0d5-9aa2-4ead-8ef9-1c2e84ebe6d0)
+
+Let's Start : 
+
+1. we are Going to use PTA30 and PTA31
+
+![image](https://github.com/user-attachments/assets/531b27f7-039f-4258-a684-a7f5935009f4)
+
+
+2. Open **example_Port.mex** and then **Routing Detail**
+
+![image](https://github.com/user-attachments/assets/e6ac8e75-ec3c-4553-82c6-1cca317c856d)
+
+### If routing Details is not in your workspace follow this steps 
+
+![image](https://github.com/user-attachments/assets/6417f412-dc78-4334-b42e-c1cd5a942472)
+
+3. Add New Row
+
+![image](https://github.com/user-attachments/assets/b9ed6301-a53e-4673-ac49-2c0b3f4e8385)
+
+
+4. For **Routed pin : PTA30**
+
+![image](https://github.com/user-attachments/assets/f2f1aa07-a5fb-48bd-aecb-445f0222e99a)
+
+
+5. For **Signal : GPIO 30** 
+
+You can Find it by holding the cursor on the top of PTA30  
+
+![image](https://github.com/user-attachments/assets/1c49edd2-85aa-4cf0-8993-6d22acab8d71)
+
+6. For **Peripheral : SIUL2** and **Direction : INPUT/OUTPUT**
+
+![image](https://github.com/user-attachments/assets/60854579-a252-4b1a-9130-130d3e5cfd57)
+
+
+7. Open **Components Panel**
+
+
+
+8. 
+
