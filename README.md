@@ -173,11 +173,25 @@ follow this steps
 
 12. Turn on the Switcher Like this 
 
+![image](https://github.com/user-attachments/assets/3e97b927-ab6e-4d93-b318-8b21c0f6cab6)
+
+13. The LED on TOP RIGHT Corner should be ON 
+
  ![image3](https://github.com/user-attachments/assets/92412944-db87-4e7e-a632-8ddd6f8c5156)
 
+14. Redebug the project  
+
+![image](https://github.com/user-attachments/assets/c0101157-4674-4bf1-ad9c-43a63e601400)
 
 
+![image](https://github.com/user-attachments/assets/73c71a08-2289-4f34-aa84-d2afdc5aa13d)
 
+15. you can try for example Run ( The RED LED Will blink 10 Times ) 
 
+![image](https://github.com/user-attachments/assets/5f9f13af-7673-4a0b-b94f-2a9089e316c2)
+
+![image](https://github.com/user-attachments/assets/cf949a75-f2e4-4d44-ad9f-729f40ff717b)
+
+![image](https://github.com/user-attachments/assets/1bca246b-fa4a-436e-8062-3746f55d0e92)
 
 
