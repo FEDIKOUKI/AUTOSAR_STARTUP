@@ -35,3 +35,45 @@ Here will be a detailed guide to make a blinking LED from scratch
 9.  If Everything work properly you will get this window after launching s32 studio 
 
 ![image](https://github.com/user-attachments/assets/9235db9d-06c3-4013-8a21-c912bcd8c03b)
+
+
+# Preparing The s32 Studio 
+
+We need to install some packages on S32 Studio 
+
+1. Go to **HELP**
+2. Go to **S32ds Extensions and Update**
+
+![image](https://github.com/user-attachments/assets/fb5a5700-fb34-47dc-b67a-a9712648732e)
+
+![image](https://github.com/user-attachments/assets/3d6e33ae-c8f1-4ab6-91a2-2abb89a7304c)
+
+3. For **S32K3XX Real-TimeDrivers AUTOSAR R21-11 Version 5.0.0 Package** You need to add it mannualy 
+4. Go to RTD NXP from this link : [**Automotive SW - S32K3/S32M27x - Real-Time Drivers for Cortex-M**](https://nxp.flexnetoperations.com/control/frse/product?child_plneID=830617)
+5. Download **SW32K3_S32M27x_RTD_4.4_4.0.0_P24_D2405.exe** and **SW32K3_S32M27x_RTD_4.4_4.0.0_P24_DS_updatesite_D2405.zip**
+
+![image](https://github.com/user-attachments/assets/352f8474-67ee-4d0a-8c47-f8cdd5282cec)
+
+
+6. IF In the installation you need the License that you can find under **License Keys Panel**
+
+![image](https://github.com/user-attachments/assets/c8100911-ff75-4bff-a532-ebe257f06a76)
+
+
+7. Then GO S32 Studio and in **S32ds Extensions and Update** Press **Add Update Sites**
+
+![image](https://github.com/user-attachments/assets/adc11261-c009-4aeb-b70b-b17601e8b205)
+
+8. Ten look for **SW32K3_S32M27x_RTD_4.4_4.0.0_P24_DS_updatesite_D2405.zip**
+9. Finally the **S32K3XX Real-TimeDrivers AUTOSAR R21-11 Version 5.0.0 Package**  Should appear
+
+
+
+
+
+
+
+
+
+
+
