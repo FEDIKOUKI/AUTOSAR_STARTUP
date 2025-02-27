@@ -268,7 +268,150 @@ You can Find it by holding the cursor on the top of PTA30
 
 7. Open **Components Panel**
 
+![image](https://github.com/user-attachments/assets/ba15721f-217b-402d-8a1e-53c7dc990c3a)
+
+#### Search for components 
+
+![image](https://github.com/user-attachments/assets/5e1dc81d-e8c7-4477-9264-0e449858ee42)
 
 
-8. 
+![image](https://github.com/user-attachments/assets/de01c3fc-e7bf-4dd9-83a2-31da0499d237)
+
+
+8.  Open **DIO > DioConfig**
+
+![image](https://github.com/user-attachments/assets/9682b2ea-d228-4101-9b22-a90cd5d5f8a9)
+
+9. We need To see Which Port We are going to use
+
+![image](https://github.com/user-attachments/assets/1b108b6e-e50b-4b86-8c40-c70af3a0c3ef)
+
+### You Can't use the port id Twice If you are going for example to Work PTA15 and PTA14
+you need to define one Dio port with ID = 1 and define 2 DioChannel 
+
+### For example : Port ID = 0 
+### Contains : PTA1,PTA2,PTA3,PTA4,........,PTA15
+
+### In Our Case : PTA30 in PORTID=1
+### Then we should verify if any of existing Port Have the ID=1 and we define the DIOchannel underit
+### Dio_Port_0 ID = 0 
+
+10. We Add New DioChannel
+
+![image](https://github.com/user-attachments/assets/59c92a6f-1ef5-4ba1-ba59-a7a263230a7b)
+
+
+11. For The name : Digital_Output_BLUE_LED and the id = 30 - 16 = 14 ( because the pin PTA16 will have 
+Diochannel id = 0 , PTA17 will have id = 1 , and viseversa ) 
+
+![image](https://github.com/user-attachments/assets/bec043c4-9e00-4d07-9a12-e7c349f8b035)
+
+ 
+12. Know We are going to configure the Port , Open **PortConfigSet in Port Panel**
+
+![image](https://github.com/user-attachments/assets/3d3df87d-c993-488c-a240-8a31d6bed63d)
+
+13. Add New Port Pin and Put The **PortPinMscr = 30(GPIO Pin Number)** 
+
+![image](https://github.com/user-attachments/assets/7f763a9b-1d97-4b30-b709-969da29db5a9)
+
+The Green Box should Automaticly updateit 
+
+14. Now We are Ready to **Update OUR Code**
+
+![image](https://github.com/user-attachments/assets/241a9b4a-f304-47e2-921a-1b88daa468a1)
+
+15. Click On **Resource**
+
+16. Open Dio_Cfg.h
+
+![image](https://github.com/user-attachments/assets/027a0b15-9afc-4a2c-b85b-a36e8a3b7e51)
+
+You will have a New Block Like this : 
+
+```C++
+
+/*=================================================================================================
+*                                      DEFINES AND MACROS
+=================================================================================================*/
+
+/**
+* @brief          Symbolic name for the configuration Dio_ConfigPC.
+*/
+#define Dio_ConfigPC    (Dio_Config)
+
+/* ========== DioConfig ========== */
+
+/* ---------- DioPort_0 ---------- */
+
+/**
+* @brief          Symbolic name for the port DioPort_0.
+*/
+#define DioConf_DioPort_DioPort_0  ((uint8)0x01U)
+/**
+* @brief          Symbolic name for the channel Digital_Output_LED_Q172.
+*
+*/
+#define DioConf_DioChannel_Digital_Output_LED_Q172  ((uint16)0x001dU)
+/**
+* @brief          Symbolic name for the channel Digital_Output_BLUE_LED.
+*
+*/
+#define DioConf_DioChannel_Digital_Output_BLUE_LED  ((uint16)0x001eU)
+/* ---------- DioPort_1 ---------- */
+
+/**
+* @brief          Symbolic name for the port DioPort_1.
+*/
+#define DioConf_DioPort_DioPort_1  ((uint8)0x03U)
+/**
+* @brief          Symbolic name for the channel Digital_Output_LED_Q257.
+*
+*/
+#define DioConf_DioChannel_Digital_Output_LED_Q257  ((uint16)0x0032U)
+
+``` 
+17. Our Blue LED is Ready To Be Used
+18. in The main.c We add this in the **main()**
+
+```C++
+int main(void)
+{
+    uint8 count = 0U;
+
+    /* Initialize the Mcu driver */
+#if (MCU_PRECOMPILE_SUPPORT == STD_ON)
+    Mcu_Init(NULL_PTR);
+#elif (MCU_PRECOMPILE_SUPPORT == STD_OFF)
+    Mcu_Init(&Mcu_Config);
+#endif /* (MCU_PRECOMPILE_SUPPORT == STD_ON) */
+
+    /* Initialize the clock tree and apply PLL as system clock */
+    Mcu_InitClock(McuClockSettingConfig_0);
+
+    /* Apply a mode configuration */
+    Mcu_SetMode(McuModeSettingConf_0);
+
+    /* Initialize all pins using the Port driver */
+    Port_Init(NULL_PTR);
+
+    while (count++ < 10)
+    {
+        Dio_WriteChannel(DioConf_DioChannel_Digital_Output_BLUE_LED, STD_HIGH);
+        TestDelay(5000000);
+
+        Dio_WriteChannel(DioConf_DioChannel_Digital_Output_BLUE_LED, STD_LOW);
+        TestDelay(5000000);
+    }
+
+    Exit_Example(TRUE);
+
+    return (0U);
+}
+
+```
+
+19. Debugg it 
+
+## Demo 
 
