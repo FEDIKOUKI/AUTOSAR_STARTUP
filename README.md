@@ -156,7 +156,26 @@ follow this steps
 
 ![image1](https://github.com/user-attachments/assets/0bbbaf5f-5b98-4d71-8227-2ff2367153e3)
 
-9. **Right Click** on the project name > 
+9. **Right Click** on the project 
+
+![image](https://github.com/user-attachments/assets/237adac7-ce57-4c37-acdb-76ef8953bf86)
+
+![image](https://github.com/user-attachments/assets/792cf090-a4eb-4f21-924f-ea4705306ac4)
+
+10. Then Press **Debug** This error should appear
+
+![image](https://github.com/user-attachments/assets/bb4017a1-7d89-449f-888d-dfefd22c0c07)
+
+
+11. Plug the **External power Supply ( 12 V , >= 2.0 A )** to the Evaluation Board 
+
+![image2](https://github.com/user-attachments/assets/f51106db-5b90-497f-a197-023899125da6)
+
+12. Turn on the Switcher Like this 
+
+ ![image3](https://github.com/user-attachments/assets/92412944-db87-4e7e-a632-8ddd6f8c5156)
+
+
 
 
 
